@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #121010;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?cs=srgb&dl=pexels-jplenio-1103970.jpg&fm=jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 230vh;
+  position: relative;
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.907);
+  padding: 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  flex: 1;
+  mix-blend-mode: multiply;
+}
+
+.logo img {
+  height: 140px;
+  mix-blend-mode: multiply;
+  background: none;
+}
+
+.heading {
+  flex: 2;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  color: #2c3e50;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.0rem;
+  list-style: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #2c3e50;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-item {
+  flex: 1 1 350px;
+  max-width: 550px;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.image-item p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: azure
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  animation: slideUp 2s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% { bottom: -100px; opacity: 0; }
+  100% { bottom: 0; opacity: 1; }
+}
